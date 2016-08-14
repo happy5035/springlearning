@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
+    <display-name>Archetype Created Web Application</display-name>
+  <!--Spring 监听器配置-->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!--Spring 配置文件-->
+     <context-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+
+    <!--Struts2 过滤去配置-->
+    <filter>
+    <filter-name>struts2</filter-name>
+      <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+      <filter-name>struts2</filter-name>
+      <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--servlet 配置-->
+    <servlet>
+      <servlet-name>HelloServlet</servlet-name>
+      <servlet-class>cn.hu.Servlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+      <servlet-name>HelloServlet</servlet-name>
+      <url-pattern>/helloServlet</url-pattern>
+    </servlet-mapping>
+
+  <!--测试-->
+</web-app>
