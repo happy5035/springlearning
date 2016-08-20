@@ -7,6 +7,6 @@
 <struts>
     <constant value="true" name="struts.devMode"/>
     <package name="default" extends="struts-default" namespace="/">
-        <action class="cn.hu.action.BookAction" name="book_*" method="{1}"> </action>
+        <action class="bookAction" name="book_*" method="{1}"> </action>
     </package>
 </struts>

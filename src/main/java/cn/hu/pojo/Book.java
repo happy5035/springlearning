@@ -1,19 +1,22 @@
 package cn.hu.pojo;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by LeeYuan on 2016/8/14.
  */
+@Component
 public class Book {
 
-    private String id;
+    private Integer id;
     private String name;
     private Double price;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

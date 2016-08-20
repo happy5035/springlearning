@@ -7,7 +7,9 @@
   <version>1.0-SNAPSHOT</version>
   <name>springweb Maven Webapp</name>
   <url>http://maven.apache.org</url>
-
+  <properties>
+    <hibernate.version>3.6.10.Final</hibernate.version>
+  </properties>
   <dependencies>
 
     <dependency>
@@ -21,12 +23,12 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>4.3.1.RELEASE</version>
-      <exclusions>
+     <!-- <exclusions>
         <exclusion>
           <groupId>commons-logging</groupId>
           <artifactId>commons-logging</artifactId>
         </exclusion>
-      </exclusions>
+      </exclusions>-->
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
@@ -132,12 +134,12 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>4.3.5.Final</version>
+      <version>${hibernate.version}</version>
     </dependency>
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-ehcache</artifactId>
-      <version>4.3.5.Final</version>
+      <version>${hibernate.version}</version>
     </dependency>
     <!--hibernate 和 log4j 整合依赖包-->
     <dependency>
@@ -146,12 +148,10 @@
       <version>1.7.12</version>
     </dependency>
     <dependency>
-        <groupId>ch.qos.logback</groupId>
-        <artifactId>logback-classic</artifactId>
-        <version>1.1.7</version>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.6.2</version>
     </dependency>
-
-
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>log4j-over-slf4j</artifactId>
@@ -163,10 +163,17 @@
       <version>1.7.21</version>
     </dependency>
     <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.7</version>
+    </dependency>
+   <!--
+
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>jul-to-slf4j</artifactId>
       <version>1.7.21</version>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>com.googlecode.log4jdbc</groupId>
       <artifactId>log4jdbc</artifactId>
@@ -189,6 +196,11 @@
       <groupId>com.mchange</groupId>
       <artifactId>c3p0</artifactId>
       <version>0.9.5.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-c3p0</artifactId>
+      <version>${hibernate.version}</version>
     </dependency>
   </dependencies>
 

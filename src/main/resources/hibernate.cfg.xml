@@ -26,9 +26,12 @@
 
     <!--tomacat 连接池配置-->
     <property name="connection.provider_class">
-      org.hibernate.c3p0.internal.C3P0ConnectionProvider
+      org.hibernate.connection.C3P0ConnectionProvider
     </property>
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->
+
+    <mapping resource="Book.hbm.xml"/>
+
   </session-factory>
 </hibernate-configuration>

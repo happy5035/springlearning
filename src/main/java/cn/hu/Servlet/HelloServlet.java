@@ -37,7 +37,7 @@ public class HelloServlet extends HttpServlet {
 
         userService.sayHello();
         System.out.println("Hello Servlet get....");
-        System.out.println("====");
+        System.out.println("======");
 //        req.
         req.getRequestDispatcher("index.jsp").forward(req,resp);
     }

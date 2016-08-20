@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>添加图书</h1>
-    <s:form action="book_add" namespace="/" method="post" >
+    <s:form action="book_add" namespace="/" method="post" theme="simple">
         图书名称：<s:textfield name="name" /><br/>
         图书价格: <s:textfield name="price"/><br/>
         <s:submit value="添加图书"/>
