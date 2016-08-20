@@ -10,4 +10,7 @@
         <property name="name"/>
         <property name="price"/>
     </class>
+    <query name="findByName" >
+        from Book where name = ?
+    </query>
 </hibernate-mapping>
