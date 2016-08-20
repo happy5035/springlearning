@@ -47,7 +47,7 @@ public class BookDao extends HibernateDaoSupport {
     }
 
     public List findByName(String name) {
-        return this.getHibernateTemplate().findByNamedQuery("findByName", name);
+        return null; //this.getHibernateTemplate().findByNamedQuery("findByName", name);
     }
 
     public Book findByIdLazy(int id) {

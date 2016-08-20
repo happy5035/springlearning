@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2219944533">
+  <component name="DataSourceManagerImpl" format="xml" hash="2713944050">
     <data-source source="LOCAL" name="PostgreSQL - springlearning@localhost" uuid="8ca310b1-a3b9-4800-a250-2ba9cdad6ad6">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>

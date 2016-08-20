@@ -1,7 +1,5 @@
 package cn.hu.pojo;
 
-import org.hibernate.annotations.Entity;
-import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
@@ -12,10 +10,12 @@ import javax.persistence.*;
 @Table(name = "book")
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "price")
     private Double price;
 
