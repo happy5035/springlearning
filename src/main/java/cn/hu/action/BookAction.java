@@ -27,7 +27,7 @@ public class BookAction extends ActionSupport implements ModelDriven<Book> {
 
 
     public String test() {
-        System.out.println("add....");
+        System.out.println("add.......");
         bookService.testAnno();
         System.out.println(++count);
         return null;
